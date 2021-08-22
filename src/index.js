@@ -7,6 +7,10 @@ const route = require('./routes');
 
 const app = express();
 const port = 3000;
+const db = require('./config/db');
+
+//Connect to database
+db.connect();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
