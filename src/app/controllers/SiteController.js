@@ -4,12 +4,12 @@ class NewsController {
     // [GET] / 
     index(req, res) {
         Course.find({}, function (err, courses) {
-                if(!err){
-                    res.json(courses);
-                }else {
-                    res.status(400).json({ error: 'ERROR!!!' });
-                }
-          });          
+            if(!err){
+                res.json(courses);
+            }else {
+                res.status(400).json({ error: 'ERROR!!!' });
+            }
+        });          
     }
 
     // [GET] /search
