@@ -1,6 +1,6 @@
 const Course = require('../models/Course');
-const {multipleMongooseToObject, mongooseToObject} = require('../../util/mongoose');
-class NewsController {
+const {multipleMongooseToObject} = require('../../util/mongoose');
+class SiteController {
     // [GET] / 
     index(req, res, next) {
         Course.find({})
@@ -18,4 +18,4 @@ class NewsController {
     }
 }
 
-module.exports = new NewsController;
+module.exports = new SiteController;
